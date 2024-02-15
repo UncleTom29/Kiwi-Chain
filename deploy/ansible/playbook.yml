@@ -1,0 +1,14 @@
+- hosts: blockchain_nodes
+  tasks:
+    - name: Install Go
+      apt:
+        name: golang
+        state: present
+
+    - name: Copy blockchain application
+      copy:
+        src: /path/to/your/blockchain/application
+        dest: /desired/path/on/the/node
+
+    - name: Run blockchain application
+      command: go run main.go

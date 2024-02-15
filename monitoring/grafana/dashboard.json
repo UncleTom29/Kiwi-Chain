@@ -1,0 +1,18 @@
+{
+    "dashboard": {
+      "title": "Blockchain Metrics",
+      "panels": [
+        {
+          "title": "Transactions",
+          "type": "graph",
+          "targets": [
+            {
+              "expr": "rate(transaction_total[5m])",
+              "datasource": "Prometheus"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
